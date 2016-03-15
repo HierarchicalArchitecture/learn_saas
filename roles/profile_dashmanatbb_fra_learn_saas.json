@@ -1,0 +1,46 @@
+{
+    "name": "profile_dashmanatbb_fra_learn_saas",
+    "description": "Region Profile for Learn SaaS",
+    "default_attributes": {
+		"learn": {
+            "development": {
+				"endpoints" : {
+					"database" : "learn-saas-dev-fra-rds.int.bbpd.io"
+				}
+            },
+            "staging": {
+				"endpoints" : {
+					"database" : "learn-saas-stage-fra-rds.int.bbpd.io"
+				}
+            },
+            "production": {
+				"endpoints" : {
+					"database" : ""
+				}
+            }
+        },
+        "ultra": {
+            "development": {
+				"router": {
+					"service": {
+						"ultra-ui": "learn-saas-dev-fra-ultra-ui-private-ip:9900"
+					}
+				}
+            },
+            "staging": {
+				"router": {
+					"service": {
+						"ultra-ui": "learn-saas-stage-fra-ultra-ui-private-ip:9900"
+					}
+				}
+            },
+            "production": {
+				"router": {
+					"service": {
+						"ultra-ui": ""
+					}
+				}
+            }
+        }
+    }
+}

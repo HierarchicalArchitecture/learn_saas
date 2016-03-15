@@ -1,0 +1,23 @@
+{
+    "name": "learn_saas_development",
+    "description": "The development Chef environment for Learn SaaS",
+    "cookbook_versions": {
+        "cloud_learn":"~> 1.12.0",
+        "learn":"~> 1.5.0",
+        "cloud_ultra":"~> 1.5.0"
+    },
+    "json_class": "Chef::Environment",
+    "chef_type": "environment",
+    "default_attributes": {
+        "java": {
+            "jdk_version": 8,
+            "install_flavor": "oracle",
+            "oracle": {
+                "accept_oracle_download_terms": true
+            }
+        },
+		"newrelic": {
+			"license": "license-for-development-environment"
+		}
+    }
+}

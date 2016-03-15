@@ -1,0 +1,6 @@
+source 'https://supermarket.chef.io'
+
+metadata
+
+cookbook 'learn', path: '../learn'
+cookbook 'bb-java', git: 'git@stash.bbpd.io:l4c/common_apps.git'

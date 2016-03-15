@@ -1,0 +1,46 @@
+{
+    "name": "profile_cloudbb_sin_learn_saas",
+    "description": "Region Profile for Learn SaaS",
+    "default_attributes": {
+		"learn": {
+            "development": {
+				"endpoints" : {
+					"database" : ""
+				}
+            },
+            "staging": {
+				"endpoints" : {
+					"database" : ""
+				}
+            },
+            "production": {
+				"endpoints" : {
+					"database" : "learn-saas-prod-sin-rds.int.bbpd.io"
+				}
+            }
+        },
+        "ultra": {
+            "development": {
+				"router": {
+					"service": {
+						"ultra-ui": ""
+					}
+				}
+            },
+            "staging": {
+				"router": {
+					"service": {
+						"ultra-ui": ""
+					}
+				}
+            },
+            "production": {
+				"router": {
+					"service": {
+						"ultra-ui": "learn-saas-prod-sin-ultra-ui-private-ip:9900"
+					}
+				}
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "learn_saas_production",
+    "description": "The staging Chef environment for Learn SaaS",
+    "cookbook_versions": {
+        "cloud_learn":"~> 1.11.0",
+        "learn":"~> 1.4.0",
+        "cloud_ultra":"~> 1.4.0"
+    },
+    "json_class": "Chef::Environment",
+    "chef_type": "environment",
+    "default_attributes": {
+        "java": {
+            "jdk_version": 7,
+            "install_flavor": "oracle",
+            "oracle": {
+                "accept_oracle_download_terms": true
+            }
+        },
+		"newrelic": {
+			"license": "license-for-production-environment"
+		}
+    }
+}
